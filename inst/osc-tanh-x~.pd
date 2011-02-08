@@ -1,0 +1,10 @@
+#N canvas 100 229 814 533 10;
+#X obj 391 146 osc~;
+#X obj 391 168 expr~ ( tanh ( $v1 * $v2 ) );
+#X obj 391 117 inlet~;
+#X obj 555 119 inlet~;
+#X obj 391 190 outlet~;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 0 0;
+#X connect 3 0 1 1;

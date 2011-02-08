@@ -1,0 +1,12 @@
+#N canvas 68 383 905 567 10;
+#X obj 40 -40 inlet~;
+#X obj 40 62 triag-x~;
+#X obj 40 84 expr~ ( tanh ($v1) );
+#X obj 40 106 outlet~;
+#X obj 61 -20 inlet~;
+#X obj 86 0 inlet~;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 4 0 1 1;
+#X connect 5 0 1 2;

@@ -1,0 +1,11 @@
+#N canvas 31 213 1058 573 10;
+#X obj 307 201 rpole~;
+#X obj 307 176 rzero_rev~;
+#X obj 306 109 inlet~;
+#X obj 420 99 inlet~;
+#X obj 307 223 outlet~;
+#X connect 0 0 4 0;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 1;
+#X connect 3 0 0 1;
