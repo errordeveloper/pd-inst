@@ -70,6 +70,16 @@
 #X obj 1180 495 (~);
 #X floatatom 1218 476 5 0 0 0 - - -;
 #X obj 1218 495 (~);
+#X obj 368 771 mth~ - - - -;
+#X floatatom 222 666 5 0 0 0 - - -;
+#X obj 222 685 (~);
+#X floatatom 260 666 5 0 0 0 - - -;
+#X obj 260 685 (~);
+#X floatatom 298 666 5 0 0 0 - - -;
+#X obj 298 685 (~);
+#X obj 368 823 dac~ 4;
+#X obj 368 793 (*);
+#X floatatom 481 794 5 0 0 0 - - -;
 #X connect 0 0 14 0;
 #X connect 0 0 16 0;
 #X connect 1 0 2 0;
@@ -115,6 +125,7 @@
 #X connect 37 0 35 0;
 #X connect 38 0 39 0;
 #X connect 38 0 56 0;
+#X connect 38 0 69 0;
 #X connect 39 0 42 0;
 #X connect 40 0 41 0;
 #X connect 42 0 43 0;
@@ -145,3 +156,12 @@
 #X connect 66 0 56 5;
 #X connect 67 0 68 0;
 #X connect 68 0 56 6;
+#X connect 69 0 77 0;
+#X connect 70 0 71 0;
+#X connect 71 0 69 1;
+#X connect 72 0 73 0;
+#X connect 73 0 69 2;
+#X connect 74 0 75 0;
+#X connect 75 0 69 3;
+#X connect 77 0 76 0;
+#X connect 78 0 77 1;
