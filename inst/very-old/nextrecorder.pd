@@ -1,0 +1,8 @@
+#N canvas 315 273 450 300 10;
+#X obj 169 48 writesf~ 2;
+#X msg 169 -11 open -bytes 2 -nextstep /tmp/rec.sf;
+#X msg 292 59 start;
+#X msg 292 80 stop;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;

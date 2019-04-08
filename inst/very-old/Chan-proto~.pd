@@ -1,0 +1,90 @@
+#N canvas 57 105 710 551 10;
+#X obj 143 -58 inlet~;
+#N canvas 0 0 999 684 filt-chan-N 0;
+#X obj 160 -1 inlet~;
+#X obj 159 262 outlet~;
+#X obj 160 91 hip~;
+#X obj 160 144 lop~;
+#X obj 183 114 p50;
+#X floatatom 183 131 9 0 0 0 - - -;
+#X obj 318 46 hsl 512 15 10.02 30060.1 1 0 empty empty empty -2 -8
+0 10 -262144 -1 -1 10900 1;
+#X obj 319 99 hsl 512 15 10.02 30060.1 1 0 empty empty empty -2 -8
+0 10 -262144 -1 -1 13800 1;
+#X obj 315 32 nbx 5 14 0 40000 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 0 256;
+#X obj 287 -16 nbx 5 14 0.04 40000 1 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0.04 1024;
+#X obj 316 85 nbx 5 14 0 40000 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 0 256;
+#X obj 183 61 p50;
+#X floatatom 183 78 9 0 0 0 - - -;
+#X obj 199 97 r fil-chan-N-lof;
+#X obj 199 44 r fil-chan-N-hif;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 4 0 5 0;
+#X connect 5 0 3 1;
+#X connect 6 0 11 0;
+#X connect 7 0 4 0;
+#X connect 8 0 6 0;
+#X connect 9 0 8 0;
+#X connect 9 0 10 0;
+#X connect 10 0 7 0;
+#X connect 11 0 12 0;
+#X connect 12 0 2 1;
+#X connect 13 0 4 0;
+#X connect 14 0 11 1;
+#X restore 144 -26 pd filt-chan-N;
+#X obj 225 267 nbx 5 14 0 9 0 0 empty init-set-ONE empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#N canvas 431 130 450 300 ramp-clip-chan-N 0;
+#X obj 159 100 inlet~;
+#X obj 159 200 outlet~;
+#X obj 160 154 clip~ -1 1;
+#X obj 225 123 * -1;
+#X floatatom 225 140 5 0 0 0 - - -;
+#X floatatom 225 109 5 0 0 0 - - -;
+#X obj 225 81 inlet;
+#X obj 176 121 p50;
+#X obj 160 137 *~;
+#X obj 176 62 inlet;
+#X connect 0 0 8 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 1;
+#X connect 5 0 3 0;
+#X connect 5 0 2 2;
+#X connect 6 0 5 0;
+#X connect 7 0 8 1;
+#X connect 8 0 2 0;
+#X connect 9 0 7 0;
+#X restore 144 281 pd ramp-clip-chan-N;
+#X obj 227 48 hsl 100 16 -2 20 0 1 empty init-set-NIL empty -2 -8 0
+10 -1 -258699 -1 900 1;
+#X obj 208 201 +;
+#X obj 208 66 vsl 36 128 1e-16 1 0 0 empty empty empty 0 -9 0 10 -1
+-250685 -44926 1100 1;
+#X floatatom 244 218 9 0 0 0 - - -;
+#X obj 208 34 nbx 9 14 1e-16 1 1 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 1e-16 100;
+#X obj 143 356 +~;
+#X obj 143 395 outlet~;
+#N canvas 301 99 450 300 mxr-msg 0;
+#X obj 2 -143 loadbang;
+#X msg 2 -87 \; init-set-NIL-chan-N 0;
+#X msg 2 -47 \; init-set-ONE-chan-N 1;
+#X connect 0 0 1 0;
+#X connect 0 0 2 0;
+#X restore 1 -87 pd mxr-msg;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 3 2;
+#X connect 3 0 9 0;
+#X connect 4 0 5 1;
+#X connect 5 0 3 1;
+#X connect 5 0 7 0;
+#X connect 6 0 5 0;
+#X connect 8 0 6 0;
+#X connect 9 0 10 0;

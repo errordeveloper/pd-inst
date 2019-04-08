@@ -1,0 +1,38 @@
+#N canvas 0 0 825 282 10;
+#X obj 206 200 countfloat;
+#X obj 131 200 countline;
+#X obj 80 28 metrocounter;
+#X obj 80 1 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X floatatom 80 101 5 0 0 0 - - -;
+#X floatatom 159 79 5 0 0 0 - - -;
+#X text 64 200 SEE ALSO:;
+#X floatatom 106 -29 5 0 0 0 - - -;
+#X floatatom 132 -9 5 0 0 0 - - -;
+#X floatatom 265 14 5 0 0 0 - - -;
+#X msg 190 -86 2;
+#X obj 232 -64 * 4;
+#X obj 261 -63 * 101;
+#X obj 361 -103 loadbang;
+#X obj 673 28 *;
+#X floatatom 673 55 5 0 0 0 - - -;
+#X obj 689 5 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 347 -26 the maximum comes up 3rd_ * 4th_ inlet iff both are
+integers;
+#X connect 2 0 4 0;
+#X connect 2 1 5 0;
+#X connect 3 0 2 0;
+#X connect 7 0 2 1;
+#X connect 8 0 2 2;
+#X connect 8 0 16 0;
+#X connect 9 0 2 3;
+#X connect 9 0 14 0;
+#X connect 10 0 11 0;
+#X connect 10 0 12 0;
+#X connect 10 0 9 0;
+#X connect 11 0 8 0;
+#X connect 12 0 7 0;
+#X connect 13 0 10 0;
+#X connect 14 0 15 0;
+#X connect 16 0 14 1;

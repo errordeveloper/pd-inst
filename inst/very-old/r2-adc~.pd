@@ -1,0 +1,11 @@
+#N canvas 71 252 450 300 10;
+#X obj 142 110 r2~;
+#X msg 109 74 \; r2-number \$1;
+#X floatatom 109 47 5 0 0 0 - - -;
+#X obj 89 95 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 202 94 adc~ 7 8;
+#X connect 2 0 1 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 1;
+#X connect 4 1 0 2;

@@ -1,0 +1,56 @@
+#N canvas -98 373 1002 528 10;
+#X obj 82 17 fline;
+#X obj -61 -15 hsl 909 32 -1000 1000 0 0 empty empty empty -2 -8 0
+10 -262144 -1 -1 45818 1;
+#X obj 82 47 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 9.20705 256;
+#X obj 83 91 /~ 2.1;
+#X obj -61 -57 hsl 909 15 0.002 2000 1 0 empty empty empty -2 -8 0
+10 -262144 -1 -1 34800 1;
+#X obj -64 -40 - 1000;
+#X floatatom 294 58 5 0 0 0 - - -;
+#X floatatom 354 78 5 0 4 0 - - -;
+#N canvas 77 423 450 300 amplo 0;
+#X obj 208 53 inlet~;
+#X obj 271 84 lop~;
+#X obj 272 109 *~ 1.7;
+#X obj 272 133 clip~ -1.01 1.01;
+#X obj 293 47 inlet;
+#X obj 313 67 inlet;
+#X obj 273 182 outlet~;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 6 0;
+#X connect 4 0 1 1;
+#X connect 5 0 2 1;
+#X restore 277 112 pd amplo;
+#X obj 143 141 /~ 2.1;
+#X text 469 65 the original idea was to use like four channels \, but
+that inna' neccessary \, as on the hammerfall each channel will be
+ballanced \, so we don't need to use a couple when for each wanted
+stereo out. when this one is running - there is still five channels
+unused on the hammerfall in 96k clock.;
+#X obj 169 43 hsl 909 15 52 2500 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 46500 1;
+#X obj 82 68 zbj0~;
+#X msg 376 216 \; zbj0-phase0 1;
+#X text 479 213 if we open this patch many times and asign different
+dac's -the we can bash a tune by reseting the phase of all functions
+we get something more rythmic though;
+#X obj 83 191 dac~ 1 2 3;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 12 0;
+#X connect 3 0 15 0;
+#X connect 4 0 5 0;
+#X connect 5 0 1 0;
+#X connect 6 0 8 1;
+#X connect 7 0 8 2;
+#X connect 8 0 9 0;
+#X connect 8 0 15 1;
+#X connect 9 0 15 2;
+#X connect 11 0 12 1;
+#X connect 12 0 3 0;
+#X connect 12 0 8 0;
+#X connect 12 0 9 0;

@@ -1,0 +1,35 @@
+#N canvas 176 249 797 414 10;
+#X msg 243 245 start;
+#X msg 243 266 stop;
+#X obj 500 314 writesf~ 8;
+#X obj 509 122 inlet~;
+#X obj 499 112 inlet~;
+#X obj 528 142 inlet~;
+#X obj 519 132 inlet~;
+#X obj 547 162 inlet~;
+#X obj 538 152 inlet~;
+#X obj 566 182 inlet~;
+#X obj 556 172 inlet~;
+#X msg 243 220 open -rate 48000 -byte 4 -nextstep /tmp/rec-8-v-107
+;
+#X floatatom 243 47 5 0 0 0 - - -;
+#X msg 243 75 set open -rate 48000 -byte 4 -nextstep /tmp/rec-8-v-\$1
+;
+#X obj 198 30 t b f;
+#X obj 198 5 r open-8-chan-sf;
+#X connect 0 0 2 0;
+#X connect 1 0 2 0;
+#X connect 3 0 2 1;
+#X connect 4 0 2 0;
+#X connect 5 0 2 3;
+#X connect 6 0 2 2;
+#X connect 7 0 2 5;
+#X connect 8 0 2 4;
+#X connect 9 0 2 7;
+#X connect 10 0 2 6;
+#X connect 11 0 2 0;
+#X connect 12 0 13 0;
+#X connect 13 0 11 0;
+#X connect 14 0 11 0;
+#X connect 14 1 12 0;
+#X connect 15 0 14 0;

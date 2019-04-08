@@ -1,0 +1,30 @@
+#N canvas 276 157 637 494 10;
+#X obj 500 374 writesf~ 2;
+#X msg 510 291 start;
+#X msg 478 245 stop;
+#X obj 510 264 delay 123;
+#X obj 478 211 select 0 1;
+#X obj 614 262 inlet~;
+#X obj 664 262 inlet~;
+#X obj 478 185 inlet;
+#X floatatom 228 110 5 0 0 0 - - -;
+#X msg 292 124 set open -nextstep -byte 4 -rate 96000 /tmp/rec-stereo-\$1
+;
+#X msg 292 148 open -nextstep -byte 4 -rate 96000 /tmp/rec-stereo-3
+;
+#X obj 228 131 t f b;
+#X obj 93 93 r r2-number;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 1 0;
+#X connect 4 0 2 0;
+#X connect 4 1 3 0;
+#X connect 5 0 0 0;
+#X connect 6 0 0 1;
+#X connect 7 0 4 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 0 0;
+#X connect 11 0 8 0;
+#X connect 11 1 10 0;
+#X connect 12 0 8 0;

@@ -1,0 +1,32 @@
+#N canvas 262 97 751 455 10;
+#X msg 164 142 bang;
+#X obj 245 17 vsl 15 128 0 12 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 4100 1;
+#X obj 315 17 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 400 1;
+#X obj 356 17 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 1900 1;
+#X obj 173 181 wxd-km~;
+#X msg 284 182 bang;
+#X text 94 303 the 1st and the last inlets take the bangs - 1st will
+toggle both numoscils and their phase \, while 6th will do only the
+phase other four: 2nd: MM frequency 3rd: fraction of MM frequency 4th:
+number to add 5th: multiply by;
+#X obj 286 17 vsl 15 128 0 12 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 4300 1;
+#X obj 40 231 clip~ -0.96 0.96;
+#X obj 40 197 hip~ 10;
+#X obj 40 253 hip~ 5;
+#X obj 1 361 8-chan-hdsp~;
+#X connect 0 0 4 0;
+#X connect 1 0 4 1;
+#X connect 2 0 4 3;
+#X connect 3 0 4 4;
+#X connect 4 0 9 0;
+#X connect 4 1 9 0;
+#X connect 5 0 4 5;
+#X connect 7 0 4 2;
+#X connect 8 0 10 0;
+#X connect 9 0 8 0;
+#X connect 10 0 11 2;
+#X connect 10 0 11 3;

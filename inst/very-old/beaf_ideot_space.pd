@@ -1,0 +1,185 @@
+#N canvas -87 361 999 684 10;
+#X obj 95 -37 vsl 24 512 22 22000 1 0 empty empty empty 0 -9 0 10 -24198
+-1 -1 0 1;
+#X obj 125 80 hsl 512 24 22 22000 1 0 empty empty empty -2 -8 0 10
+-250685 -1 -1 0 1;
+#X obj 65 -37 vsl 24 512 22 22000 1 0 empty empty empty 0 -9 0 10 -24198
+-1 -1 0 1;
+#X obj 125 109 hsl 512 24 22 22000 1 0 empty empty empty -2 -8 0 10
+-250685 -1 -1 0 1;
+#X obj 845 -17 vsl 24 512 22 22000 1 0 empty empty empty 0 -9 0 10
+-24198 -1 -1 0 1;
+#X obj 295 390 hsl 512 24 22 22000 1 0 empty empty empty -2 -8 0 10
+-250685 -1 -1 0 1;
+#X obj 815 -17 vsl 24 512 22 22000 1 0 empty empty empty 0 -9 0 10
+-24198 -1 -1 0 1;
+#X obj 726 -71 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 46 -71 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 126 39 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 306 359 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 131 141 beaf_ideot ===---;
+#X obj 295 419 hsl 512 24 22 22000 1 0 empty empty empty -2 -8 0 10
+-250685 -1 -1 0 1;
+#X obj 616 159 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 416 169 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 496 209 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 586 219 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 15 -138 hsl 128 24 22 22000 1 0 empty empty empty -2 -8 0 10
+-195568 -1 -1 0 1;
+#X obj 715 -138 hsl 128 24 22 22000 1 0 empty empty empty -2 -8 0 10
+-195568 -1 -1 0 1;
+#X obj 315 -116 tabslider_8p;
+#X obj 224 -119 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 508 -126 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array tab-top-right 16 float 1;
+#A 0 0.100001 0 0 0 0 0 0 0 0.72857 0 0 0 0 0 0 0;
+#X coords 0 1 15 -1 200 140 1;
+#X restore 509 -68 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array tab-top-left 16 float 1;
+#A 0 0.185715 0 0 0 0.828573 0 0 0 0.371429 0 0 0 -0.171429 0 0 0;
+#X coords 0 1 15 -1 200 140 1;
+#X restore 200 -67 graph;
+#N canvas 0 0 999 684 (subpatch) 0;
+#X array tab-bot-right 16 float 1;
+#A 0 0.100001 0 -1.3113e-06 0 0.0285708 0 -0.0142874 0 -0.142862 0
+-0.0285734 0 -0.128576 0 -0.214292 0;
+#X coords 0 1 15 -1 200 140 1;
+#X restore 610 531 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array tab-bot-left 16 float 1;
+#A 0 -0.485725 0 0.0285721 0 0.114288 0 0.171432 0 0.228577 0 0.285721
+0 0.314293 0 0.285721 0;
+#X coords 0 1 15 -1 200 140 1;
+#X restore 130 525 graph;
+#X msg 315 -148 set tab-top-left;
+#X obj 315 -88 s top-left;
+#X msg 595 -148 set tab-top-right;
+#X obj 599 -99 s top-right;
+#X obj 224 761 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 508 754 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 479 -109 loadbang;
+#X obj 489 501 outlet~;
+#X obj 489 521 outlet~;
+#X obj 756 456 bop~;
+#X obj 301 451 beaf_ideot ---===;
+#X obj 599 -123 tabslider_8p;
+#X obj 1624 609 vsl 24 512 22 22000 1 0 empty empty empty 0 -9 0 10
+-24198 -1 -1 0 1;
+#X obj 1594 609 vsl 24 512 22 22000 1 0 empty empty empty 0 -9 0 10
+-24198 -1 -1 0 1;
+#X obj 1439 1046 hsl 512 24 22 22000 1 0 empty empty empty -2 -8 0
+10 -250685 -1 -1 0 1;
+#X obj 1439 1075 hsl 512 24 22 22000 1 0 empty empty empty -2 -8 0
+10 -250685 -1 -1 0 1;
+#N canvas 447 34 533 425 bot-rop 0;
+#X obj 100 216 s bot-right;
+#X obj 100 154 textfile;
+#X msg 100 119 read /tmp/pd/tab-bot-right;
+#X msg 340 185 print;
+#X msg 340 213 rewind;
+#X msg 340 244 bang;
+#X obj 97 16 inlet;
+#X obj 28 111 delay 1;
+#X obj 28 131 delay 2;
+#X obj 28 151 delay 3;
+#X msg 97 55 bang \; tab-bot-right write /tmp/pd/tab-bot-right;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 0;
+#X connect 4 0 1 0;
+#X connect 5 0 1 0;
+#X connect 6 0 10 0;
+#X connect 7 0 8 0;
+#X connect 7 0 2 0;
+#X connect 8 0 9 0;
+#X connect 8 0 4 0;
+#X connect 9 0 5 0;
+#X connect 10 0 7 0;
+#X restore 602 810 pd bot-rop;
+#N canvas 447 34 533 425 bot-lop 0;
+#X obj 100 154 textfile;
+#X msg 340 185 print;
+#X msg 340 213 rewind;
+#X msg 340 244 bang;
+#X obj 97 16 inlet;
+#X obj 28 111 delay 1;
+#X obj 28 131 delay 2;
+#X obj 28 151 delay 3;
+#X obj 100 216 s bot-left;
+#X msg 100 119 read /tmp/pd/tab-bot-left;
+#X msg 96 55 bang \; tab-bot-left write /tmp/pd/tab-bot-left;
+#X connect 0 0 8 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 10 0;
+#X connect 5 0 6 0;
+#X connect 5 0 9 0;
+#X connect 6 0 7 0;
+#X connect 6 0 2 0;
+#X connect 7 0 3 0;
+#X connect 9 0 0 0;
+#X connect 10 0 5 0;
+#X restore 236 794 pd bot-lop;
+#X connect 0 0 11 1;
+#X connect 1 0 11 5;
+#X connect 2 0 11 0;
+#X connect 3 0 11 4;
+#X connect 4 0 36 0;
+#X connect 5 0 36 5;
+#X connect 6 0 36 1;
+#X connect 7 0 6 0;
+#X connect 7 0 4 0;
+#X connect 8 0 2 0;
+#X connect 8 0 0 0;
+#X connect 9 0 1 0;
+#X connect 9 0 3 0;
+#X connect 10 0 5 0;
+#X connect 10 0 12 0;
+#X connect 11 0 33 0;
+#X connect 11 0 35 0;
+#X connect 11 1 33 0;
+#X connect 11 1 35 0;
+#X connect 12 0 36 4;
+#X connect 13 0 36 2;
+#X connect 14 0 11 2;
+#X connect 15 0 11 3;
+#X connect 16 0 36 3;
+#X connect 17 0 8 0;
+#X connect 18 0 7 0;
+#X connect 19 0 27 0;
+#X connect 20 0 19 1;
+#X connect 21 0 37 1;
+#X connect 26 0 19 0;
+#X connect 28 0 37 0;
+#X connect 30 0 43 0;
+#X connect 31 0 42 0;
+#X connect 32 0 26 0;
+#X connect 32 0 28 0;
+#X connect 36 0 34 0;
+#X connect 36 0 35 1;
+#X connect 36 1 34 0;
+#X connect 36 1 35 1;
+#X connect 37 0 29 0;
+#X connect 38 0 4 0;
+#X connect 38 0 2 0;
+#X connect 39 0 6 0;
+#X connect 39 0 0 0;
+#X connect 40 0 3 0;
+#X connect 40 0 5 0;
+#X connect 41 0 12 0;
+#X connect 41 0 1 0;

@@ -1,0 +1,12 @@
+#N canvas 256 151 450 300 10;
+#X obj 188 94 countline;
+#X msg 164 11 bang;
+#X floatatom 211 175 5 0 0 0 - - -;
+#X msg 233 -20 500;
+#X obj 233 -94 loadbang;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 3 0 0 2;
+#X connect 3 0 0 1;
+#X connect 4 0 3 0;
+#X connect 4 0 0 0;

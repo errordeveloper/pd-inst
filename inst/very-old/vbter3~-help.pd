@@ -1,0 +1,65 @@
+#N canvas 0 0 999 684 10;
+#X obj 165 77 vbter3~;
+#X floatatom 165 55 5 0 0 0 - - -;
+#X floatatom 209 55 5 0 0 0 - - -;
+#X obj 92 99 vsl 25 128 0.12 12 1 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 8920 1;
+#X obj 62 99 vsl 25 128 0.12 12 1 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 5500 1;
+#X obj 171 171 dac~ 1 2 3 4;
+#X obj 179 121 *~;
+#X obj 377 130 tabwrite~ tc1;
+#X obj 477 130 table tc1 4096;
+#X obj 377 150 tabwrite~ tc2;
+#X obj 377 170 tabwrite~ tc3;
+#X obj 477 150 table tc2 4096;
+#X obj 477 170 table tc3 4096;
+#X msg 388 34 bang;
+#X msg 649 363 16.72;
+#X msg 809 363 44.26;
+#X msg 729 363 30.74;
+#X obj 649 600 s vbtep-1;
+#X obj 729 600 s vbtep-2;
+#X obj 809 600 s vbtep-3;
+#X obj 461 396 hsl 404 25 0.202 202 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 3299 1;
+#X obj 458 428 fline;
+#X obj 461 456 hsl 404 25 0.202 202 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 6400 1;
+#X obj 458 488 fline;
+#X obj 461 516 hsl 404 25 0.202 202 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 9200 1;
+#X obj 458 548 fline;
+#X obj 95 240 hsl 512 20 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 24500 1;
+#X text 96 327 the idea is to get such a base sort of comming out and
+very slowly going away after each time the bass drum is kicked .. so
+we adjust the three sliders on the top accorsding to the composition
+\, so the other three will deppend on velocity .;
+#X connect 0 0 5 0;
+#X connect 0 0 6 0;
+#X connect 0 0 7 0;
+#X connect 0 1 5 1;
+#X connect 0 1 6 1;
+#X connect 0 1 9 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;
+#X connect 3 0 2 0;
+#X connect 3 0 13 0;
+#X connect 4 0 1 0;
+#X connect 4 0 13 0;
+#X connect 6 0 5 2;
+#X connect 6 0 10 0;
+#X connect 13 0 7 0;
+#X connect 13 0 9 0;
+#X connect 13 0 10 0;
+#X connect 14 0 20 0;
+#X connect 15 0 24 0;
+#X connect 16 0 22 0;
+#X connect 20 0 21 0;
+#X connect 21 0 17 0;
+#X connect 22 0 23 0;
+#X connect 23 0 18 0;
+#X connect 24 0 25 0;
+#X connect 25 0 19 0;
+#X connect 26 0 3 0;

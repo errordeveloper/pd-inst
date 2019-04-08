@@ -1,0 +1,66 @@
+#N canvas 0 60 738 343 10;
+#X obj 120 82 joystick 3;
+#X floatatom 120 155 5 0 0 0 - - -;
+#X floatatom 168 155 5 0 0 0 - - -;
+#X msg 120 41 print;
+#X obj 221 67 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+;
+#X obj 179 41 hradio 15 1 0 8 empty empty empty 0 -6 0 8 -262144 -1
+-1 3;
+#X msg 159 65 open \$1;
+#X obj 281 186 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 249 120 route btn_0 btn_1 btn_2 btn_3 btn_4 btn_5 btn_6 btn_7
+;
+#X obj 281 227 outlet;
+#X obj 307 186 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 307 227 outlet;
+#X obj 331 186 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 331 227 outlet;
+#X obj 355 186 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 355 227 outlet;
+#X obj 381 186 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 381 227 outlet;
+#X obj 422 186 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 422 227 outlet;
+#X obj 452 186 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 452 227 outlet;
+#X obj 482 186 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 482 227 outlet;
+#X obj 120 207 outlet;
+#X obj 130 207 outlet;
+#X obj 210 5 inlet;
+#X connect 0 0 1 0;
+#X connect 0 0 24 0;
+#X connect 0 1 2 0;
+#X connect 0 1 25 0;
+#X connect 0 6 8 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;
+#X connect 5 0 6 0;
+#X connect 6 0 0 0;
+#X connect 7 0 9 0;
+#X connect 8 0 7 0;
+#X connect 8 1 10 0;
+#X connect 8 2 12 0;
+#X connect 8 3 14 0;
+#X connect 8 4 16 0;
+#X connect 8 5 18 0;
+#X connect 8 6 20 0;
+#X connect 8 7 22 0;
+#X connect 10 0 11 0;
+#X connect 12 0 13 0;
+#X connect 14 0 15 0;
+#X connect 16 0 17 0;
+#X connect 18 0 19 0;
+#X connect 20 0 21 0;
+#X connect 22 0 23 0;
+#X connect 26 0 0 0;
